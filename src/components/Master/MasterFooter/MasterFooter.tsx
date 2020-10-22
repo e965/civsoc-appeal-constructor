@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { Container } from '../../common';
 
@@ -8,9 +9,12 @@ const MasterFooter: React.FC = () => {
     return (
         <footer className="app-footer">
             <Container>
-                <a href="https://civsoc.net/mgrob/" target="_blank" rel="noopener noreferrer">
-                    Проект Молодёжного Гражданского Общества
-                </a>
+                <div className="app-footer__links">
+                    <a href="https://civsoc.net/mgrob/" target="_blank" rel="noopener noreferrer">
+                        Проект Молодёжного Гражданского Общества
+                    </a>{' '}
+                    &middot; <Link to="/about">О проекте</Link>
+                </div>
             </Container>
         </footer>
     );

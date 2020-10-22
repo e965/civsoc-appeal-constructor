@@ -2,6 +2,73 @@
 
 .app {
     &-header {
-        //
+        &__nav {
+            a {
+                --link-color: #000;
+                text-decoration: none;
+                color: var(--link-color);
+            }
+
+            &__items {
+                display: flex;
+
+                align-items: center;
+
+                font-size: 0;
+                font-weight: 500;
+            }
+
+            &__item {
+                list-style: none;
+
+                font-size: 2rem;
+
+                &:not(:first-child) {
+                    margin-left: 1em;
+                }
+
+                a {
+                    &.active {
+                        --link-color: #772ff8;
+                    }
+
+                    &:hover {
+                        --link-color: #{lighten(#772ff8, 10%)};
+                    }
+                }
+            }
+
+            @media screen and #{map-get($mq, 'notDesktop')} {
+                &__item {
+                    font-size: 1.6rem;
+                }
+            }
+
+            @media screen and #{map-get($mq, 'tablet')} {
+                &__items {
+                    display: block;
+                }
+
+                &__item {
+                    &:not(:first-child) {
+                        margin-left: 0;
+                    }
+
+                    &[data-to='/'],
+                    &[data-to='/about'] {
+                        display: inline-block;
+                    }
+
+                    &[data-to='/about'] {
+                        margin-left: 1em;
+                    }
+
+                    &[data-to='/edu'],
+                    &[data-to='/police'] {
+                        margin-top: 0.25em;
+                    }
+                }
+            }
+        }
     }
 }
