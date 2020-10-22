@@ -9,7 +9,7 @@ const MasterHeader: React.FC = () => {
     const NavigationData: { text: string; url: string }[] = [
         {
             text: 'Главная',
-            url: '/',
+            url: '/index',
         },
         {
             text: 'О проекте',
@@ -32,9 +32,7 @@ const MasterHeader: React.FC = () => {
                     <ul className="app-header__nav__items">
                         {NavigationData.map(NavigationItem => (
                             <li key={NavigationItem.url} data-to={NavigationItem.url} className="app-header__nav__item">
-                                <NavLink to={NavigationItem.url} exact>
-                                    {NavigationItem.text}
-                                </NavLink>
+                                <NavLink to={NavigationItem.url}>{NavigationItem.text}</NavLink>
                             </li>
                         ))}
                     </ul>
