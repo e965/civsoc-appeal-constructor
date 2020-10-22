@@ -1,0 +1,9 @@
+*.html text eol=crlf
+*.scss text eol=crlf
+*.css text eol=crlf
+*.ts text eol=crlf
+*.tsx text eol=crlf
+*.json text eol=crlf
+*.md text eol=crlf
+*.svg text eol=crlf
+*.txt text eol=crlf

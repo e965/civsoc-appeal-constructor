@@ -1,0 +1,61 @@
+{
+    "name": "@civsoc/template-to-doc-front",
+    "version": "0.1.0",
+    "private": true,
+    "author": "Dmitry <dmitry@cojam.ru> (https://e965.ru)",
+    "license": "MIT",
+    "homepage": "./",
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "eslint": "eslint .",
+        "prettier": "prettier --write **/*.{html,json,yaml,ts,tsx,css,scss}",
+        "lint-staged": "lint-staged"
+    },
+    "lint-staged": {
+        "*.{html,json,yaml,ts,tsx,css,scss}": [
+            "prettier --write"
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run lint-staged"
+        }
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "dependencies": {
+        "react": "17.0.0",
+        "react-app-polyfill": "1.0.6",
+        "react-dom": "17.0.0",
+        "react-router-dom": "5.2.0"
+    },
+    "devDependencies": {
+        "@types/node": "14.14.2",
+        "@types/react": "16.9.53",
+        "@types/react-dom": "16.9.8",
+        "@types/react-router-dom": "5.1.6",
+        "@typescript-eslint/eslint-plugin": "4.5.0",
+        "@typescript-eslint/parser": "4.5.0",
+        "eslint-config-prettier": "6.14.0",
+        "eslint-plugin-prettier": "3.1.4",
+        "husky": "4.3.0",
+        "lint-staged": "10.4.2",
+        "prettier": "2.1.2",
+        "react-scripts": "^3.4.4",
+        "sass": "1.27.0",
+        "typescript": "4.0.3"
+    }
+}

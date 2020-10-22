@@ -1,0 +1,9 @@
+$mq: (
+    mobile_s: '(max-width: 320px)',
+    mobile_m: '(max-width: 375px)',
+    mobile_l: '(max-width: 475px)',
+    notMobile: '(min-width: 476px)',
+    tablet: '(max-width: 768px)',
+    notDesktop: '(max-width: 1026px)',
+    desktop: '(min-width: 1027px)',
+);
