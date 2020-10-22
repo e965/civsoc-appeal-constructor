@@ -13,7 +13,10 @@ const MasterFooter: React.FC = () => {
                     <a href="https://civsoc.net/mgrob/" target="_blank" rel="noopener noreferrer">
                         Проект Молодёжного Гражданского Общества
                     </a>{' '}
-                    &middot; <Link to="/about">О проекте</Link>
+                    &middot;{' '}
+                    <Link to="/about" style={{ whiteSpace: 'nowrap' }}>
+                        О проекте
+                    </Link>
                 </div>
             </Container>
         </footer>

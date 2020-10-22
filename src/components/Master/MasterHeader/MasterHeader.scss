@@ -54,7 +54,9 @@
                         margin-left: 0;
                     }
 
-                    &[data-to='/'],
+                    // ссылок в шапке не так много, так что вполне позволительно рулить ими вот так
+
+                    &[data-to='/index'],
                     &[data-to='/about'] {
                         display: inline-block;
                     }

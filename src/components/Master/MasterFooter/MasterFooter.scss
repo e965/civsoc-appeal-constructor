@@ -3,6 +3,8 @@
 .app {
     &-footer {
         &__links {
+            line-height: 1.5;
+
             a {
                 --link-color: #000;
 
