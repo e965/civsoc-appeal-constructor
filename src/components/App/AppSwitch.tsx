@@ -1,11 +1,12 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
+import MasterContainer from '../Master/MasterContainer';
 import ErrorPage from '../ErrorPage/ErrorPageContainer';
 
 const AppSwitch: React.FC = () => {
     return (
-        <>
+        <MasterContainer>
             <Switch>
                 <Route path="/" exact>
                     <p>Привет!</p>
@@ -19,7 +20,7 @@ const AppSwitch: React.FC = () => {
                     <Redirect to="/error-404" />
                 </Route>
             </Switch>
-        </>
+        </MasterContainer>
     );
 };
 
