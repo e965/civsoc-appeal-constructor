@@ -2,21 +2,153 @@
 
 .app {
     &-footer {
+        margin-top: 40px;
+        padding: 40px 0;
+
         background-color: #f8f9fa;
 
-        &__links {
+        font-size: 1.1em;
+        --link-color: #2580ff;
+
+        a {
+            color: var(--link-color);
+        }
+
+        .cs-container {
+            display: flex;
+
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        &__attribution {
+            width: 150px;
+            min-width: 150px;
+
             line-height: 1.5;
 
             a {
-                --link-color: #000;
-
                 text-decoration: none;
-                color: var(--link-color);
+                --link-color: #000;
+            }
 
-                border-bottom: 1px solid var(--link-color);
+            &__logo {
+                a {
+                    display: block;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            &__text {
+                margin-top: 10px;
+
+                a {
+                    &:hover {
+                        --link-color: #2580ff;
+                    }
+
+                    span {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        &__links {
+            display: flex;
+
+            justify-content: space-between;
+
+            margin-left: 40px;
+
+            a {
+                --link-color: #2e2ece;
+                text-decoration: none;
+
+                border-bottom: 1px solid #ccc;
 
                 &:hover {
                     --link-color: #2580ff;
+                }
+            }
+
+            &__section {
+                padding: 0 50px;
+
+                line-height: 1.5;
+
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                }
+
+                p {
+                    font-weight: 500;
+                }
+
+                ul {
+                    margin-top: 10px;
+
+                    li {
+                        list-style: none;
+
+                        line-height: 1.5;
+
+                        &:not(:first-child) {
+                            margin-top: 5px;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media screen and #{map-get($mq, 'notDesktop')} {
+            .cs-container {
+                display: block;
+            }
+
+            &__links {
+                margin-top: 20px;
+                margin-left: 0px;
+            }
+        }
+
+        @media screen and #{map-get($mq, 'tablet')} {
+            text-align: center;
+
+            &__attribution {
+                width: 100%;
+
+                &__logo {
+                    width: 200px;
+                    margin: 0 auto;
+                }
+
+                &__text {
+                    a {
+                        span {
+                            display: inline;
+                        }
+                    }
+                }
+            }
+
+            &__links {
+                display: block;
+
+                &__section {
+                    margin-top: 20px;
+                    padding: 0;
+
+                    ul {
+                        margin-top: 0;
+                    }
                 }
             }
         }
