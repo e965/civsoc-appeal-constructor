@@ -12,10 +12,6 @@ const MasterHeader: React.FC = () => {
             url: '/index',
         },
         {
-            text: 'О проекте',
-            url: '/about',
-        },
-        {
             text: 'В образовательные организации',
             url: '/edu',
         },

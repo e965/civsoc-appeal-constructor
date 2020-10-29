@@ -2,6 +2,8 @@
 
 .app {
     &-header {
+        padding: 20px 0;
+
         &__nav {
             a {
                 --link-color: #000;
@@ -29,11 +31,11 @@
 
                 a {
                     &.active {
-                        --link-color: #772ff8;
+                        --link-color: #2580ff;
                     }
 
                     &:hover {
-                        --link-color: #{lighten(#772ff8, 10%)};
+                        --link-color: #{lighten(#2580ff, 10%)};
                     }
                 }
             }
@@ -56,13 +58,8 @@
 
                     // ссылок в шапке не так много, так что вполне позволительно рулить ими вот так
 
-                    &[data-to='/index'],
-                    &[data-to='/about'] {
+                    &[data-to='/index'] {
                         display: inline-block;
-                    }
-
-                    &[data-to='/about'] {
-                        margin-left: 1em;
                     }
 
                     &[data-to='/edu'],

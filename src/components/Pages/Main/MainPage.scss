@@ -1,0 +1,95 @@
+@import '../../../styles/Imports';
+
+.page {
+    &--index {
+        padding: 0 20px;
+
+        &__tagline {
+            font-size: 3.75em;
+
+            span {
+                white-space: nowrap;
+            }
+        }
+
+        &__about,
+        &__examples {
+            margin-top: 40px;
+        }
+
+        &__about {
+            font-size: 1.5em;
+            line-height: 1.8;
+
+            p {
+                margin-top: 1em;
+            }
+        }
+
+        &__examples {
+            font-size: 1.25em;
+            line-height: 1.5;
+
+            p,
+            li,
+            a {
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            ul {
+                display: contents;
+
+                li {
+                    list-style: none;
+                    white-space: nowrap;
+
+                    padding: 5px;
+
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+
+                        background-color: #2580ff;
+
+                        padding: 5px 20px;
+
+                        border-radius: 99px;
+
+                        &:hover {
+                            background-color: #{lighten(#2580ff, 5%)};
+                        }
+                    }
+                }
+            }
+        }
+
+        @media screen and #{map-get($mq, 'notDesktop')} {
+            padding: 0 10px;
+
+            &__tagline {
+                font-size: 2em;
+            }
+        }
+
+        @media screen and #{map-get($mq, 'mobile_l')} {
+            &__tagline {
+                font-size: 1.75em;
+            }
+
+            &__about {
+                font-size: 1.25em;
+            }
+
+            &__example {
+                font-size: 1em;
+            }
+        }
+
+        @media screen and #{map-get($mq, 'mobile_m')} {
+            &__tagline {
+                font-size: 1.5em;
+            }
+        }
+    }
+}

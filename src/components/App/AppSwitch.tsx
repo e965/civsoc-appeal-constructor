@@ -7,7 +7,6 @@ import MasterContainer from '../Master/MasterContainer';
 import ErrorPage from '../ErrorPage/ErrorPageContainer';
 
 import MainPage from '../Pages/Main/MainPage';
-import AboutPage from '../Pages/About/AboutPage';
 
 import EduPage from '../EduPage/EduPageContainer';
 
@@ -20,9 +19,6 @@ const AppSwitch: React.FC = () => {
                 </Route>
                 <Route path="/index">
                     <MainPage />
-                </Route>
-                <Route path="/about">
-                    <AboutPage />
                 </Route>
                 <Route path="/edu" exact>
                     <EduPage />

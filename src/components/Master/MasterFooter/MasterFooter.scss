@@ -2,6 +2,8 @@
 
 .app {
     &-footer {
+        background-color: #f8f9fa;
+
         &__links {
             line-height: 1.5;
 
@@ -14,7 +16,7 @@
                 border-bottom: 1px solid var(--link-color);
 
                 &:hover {
-                    --link-color: #772ff8;
+                    --link-color: #2580ff;
                 }
             }
         }
