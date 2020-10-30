@@ -17,6 +17,12 @@
         &__list {
             margin-top: 10px;
 
+            &:empty {
+                &:before {
+                    content: attr(data-empty);
+                }
+            }
+
             li {
                 margin-top: 10px;
                 list-style: none;
@@ -39,9 +45,5 @@
                 }
             }
         }
-    }
-
-    &__form {
-        margin-top: 50px;
     }
 }

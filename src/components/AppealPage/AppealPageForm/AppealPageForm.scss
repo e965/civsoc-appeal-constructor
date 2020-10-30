@@ -1,0 +1,54 @@
+@import '../../../styles/Imports';
+
+.appeal {
+    &__form {
+        margin-top: 50px;
+        padding: 0 40px;
+
+        input,
+        button {
+            font-family: inherit;
+        }
+
+        &__head {
+            padding: 20px;
+        }
+
+        &__item {
+            & > * {
+                display: inline-block;
+                vertical-align: middle;
+
+                padding: 20px;
+            }
+
+            &__label {
+                font-weight: 500;
+                font-size: 1em;
+
+                width: 65%;
+            }
+
+            &__input {
+                width: 35%;
+
+                &[data-type='text'] {
+                    input {
+                        width: 100%;
+                        padding: 10px;
+
+                        border-radius: 5px;
+                        border: 1px solid #898989;
+
+                        outline: none;
+
+                        &:focus {
+                            border-color: #2831ff;
+                            box-shadow: 0px 5px 40px rgba(37, 128, 255, 0.3);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
