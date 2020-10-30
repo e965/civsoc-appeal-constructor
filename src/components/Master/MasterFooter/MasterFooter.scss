@@ -2,7 +2,7 @@
 
 .app {
     &-footer {
-        margin-top: 40px;
+        margin-top: 50px;
         padding: 40px 0;
 
         background-color: #f8f9fa;
@@ -71,7 +71,7 @@
                 border-bottom: 1px solid #ccc;
 
                 &:hover {
-                    --link-color: #2580ff;
+                    border-color: var(--link-color);
                 }
             }
 

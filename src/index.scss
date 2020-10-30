@@ -24,4 +24,8 @@ body {
     font-size: 16px;
 }
 
+a {
+    transition: all 0.2s ease-in-out;
+}
+
 @import './styles/Common';

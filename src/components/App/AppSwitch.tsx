@@ -8,7 +8,7 @@ import ErrorPage from '../ErrorPage/ErrorPageContainer';
 
 import MainPage from '../Pages/Main/MainPage';
 
-import EduPage from '../EduPage/EduPageContainer';
+import AppealPage from '../AppealPage/AppealPageContainer';
 
 const AppSwitch: React.FC = () => {
     return (
@@ -21,15 +21,15 @@ const AppSwitch: React.FC = () => {
                     <MainPage />
                 </Route>
                 <Route path="/edu" exact>
-                    <EduPage />
+                    <AppealPage org="edu" />
                 </Route>
                 {EduApeals.map(Apeal => (
-                    <Route key={Apeal.id} path={`/edu/${Apeal.id}`}>
-                        <EduPage appealID={Apeal.id} />
+                    <Route key={Apeal.id} path={`/edu/${Apeal.id}`} exact>
+                        <AppealPage org="edu" appealID={Apeal.id} />
                     </Route>
                 ))}
                 <Route path="/police" exact>
-                    <p>привет))</p>
+                    <AppealPage org="police" />
                 </Route>
                 {[404].map(ErrorID => (
                     <Route key={ErrorID} path={`/error-${ErrorID}`}>

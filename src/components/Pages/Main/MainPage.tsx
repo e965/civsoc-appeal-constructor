@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './MainPage.scss';
 
@@ -25,16 +26,16 @@ const MainPage: React.FC = () => {
                 <p>Примеры заявлений:</p>
                 <ul>
                     <li>
-                        <a href="#">заявление 1 asd asd </a>
+                        <Link to="/">заявление 1 asd asd </Link>
                     </li>
                     <li>
-                        <a href="#">заявление 2 asdads da</a>
+                        <Link to="/">заявление 2 asdads da</Link>
                     </li>
                     <li>
-                        <a href="#">заявление 3 asd</a>
+                        <Link to="/">заявление 3 asd</Link>
                     </li>
                     <li>
-                        <a href="#">заявление 4</a>
+                        <Link to="/">заявление 4</Link>
                     </li>
                 </ul>
             </div>

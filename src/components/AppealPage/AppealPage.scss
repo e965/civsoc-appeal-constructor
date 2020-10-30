@@ -1,0 +1,47 @@
+@import '../../styles/Imports';
+
+.appeal {
+    &__head {
+        padding: 40px 60px;
+
+        background-color: #fff;
+        border-radius: 25px;
+
+        box-shadow: 7px 12px 70px rgba(#000, 0.05);
+
+        &__h {
+            font-size: 3em;
+            font-weight: 500;
+        }
+
+        &__list {
+            margin-top: 10px;
+
+            li {
+                margin-top: 10px;
+                list-style: none;
+
+                &[data-selected] {
+                    font-weight: 500;
+                }
+
+                a {
+                    text-decoration: none;
+
+                    --link-color: #0000c4;
+
+                    color: var(--link-color);
+                    border-bottom: 1px solid #cbcbcb;
+
+                    &:hover {
+                        border-color: var(--link-color);
+                    }
+                }
+            }
+        }
+    }
+
+    &__form {
+        margin-top: 50px;
+    }
+}
