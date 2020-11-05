@@ -20,6 +20,9 @@ body {
     -moz-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
+    overflow-x: hidden;
+    overflow-y: scroll;
+
     font-family: Roboto, Arial, sans-serif;
     font-size: 16px;
 }
