@@ -7,7 +7,7 @@ const MainPage: React.FC = () => {
     return (
         <div className="page page--index">
             <div className="page--index__tagline">
-                <span>Конструктор заявлений</span> — <span>новый проект</span> <span>фракции учащихся</span>{' '}
+                <span>Заявитель</span> — <span>новый проект</span> <span>фракции учащихся</span>{' '}
                 <span>
                     <q>Гражданского общества</q>
                 </span>
