@@ -11,16 +11,18 @@ const Template: React.FC<any> = props => {
                 {props.school}
                 <br />
                 {props.director}
+                <br />
                 от учащегося
                 <br />
                 {props.student}
+                <br />
                 {props.is_group ? (
                     'и нижеподписавшихся учащихся'
                 ) : (
                     <>
                         родителя учащегося
                         <br />
-                        props.parent
+                        {props.parent}
                     </>
                 )}
             </div>
@@ -54,14 +56,16 @@ const Template: React.FC<any> = props => {
                     <br />
                     ПРОСИМ:
                     <br />
-                    <ol>
-                        <li>
-                            Не применять нормы приказа Генерального директора {props.school} {props.director_order}
-                        </li>
-                        <li>Ответить по адресу на данное заявление по указанному адресу.</li>
-                    </ol>
                 </p>
-                <p className="text--mt">Приложение: подписной лист</p>
+                <ol>
+                    <li>
+                        Не применять нормы приказа Генерального директора {props.school} {props.director_order}
+                    </li>
+                    <li>Ответить по адресу на данное заявление по указанному адресу.</li>
+                </ol>
+                <p className="text--mt" hidden={!props.is_group}>
+                    Приложение: подписной лист
+                </p>
             </div>
         </>
     );

@@ -2,6 +2,7 @@ import { FC as ReactFC } from 'react';
 
 export type FieldType = {
     type: 'text' | 'checkbox';
+    htmlType?: 'text' | 'number' | 'email';
     required?: boolean;
     label?: string;
     example?: string;

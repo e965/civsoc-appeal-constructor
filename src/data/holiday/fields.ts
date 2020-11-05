@@ -27,6 +27,7 @@ const FormFields: FieldsType = {
     },
     email: {
         type: 'text',
+        htmlType: 'email',
         label: 'Почта для обратной связи',
         example: 'sidorov@yandex.ru',
     },

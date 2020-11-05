@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { AppealType } from '../../data/types';
 
 import AppealPageForm from './AppealPageForm/AppealPageForm';
+import AppealPageTemplate from './AppealPageTemplate/AppealPageTemplate';
 
 import './AppealPage.scss';
 
@@ -11,13 +12,15 @@ type PropsType = {
     org: 'edu' | 'police';
     AppealsSource: AppealType[];
     SelectedAppeal: AppealType | null;
+    FormData: { [id: string]: string | boolean };
     handleFormOnSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
+    handleFormOnInput: (event: React.FormEvent<HTMLFormElement>) => void;
 };
 
 const AppealPage: React.FC<PropsType> = props => {
     const { org } = props;
-    const { AppealsSource, SelectedAppeal } = props;
-    const { handleFormOnSubmit } = props;
+    const { AppealsSource, SelectedAppeal, FormData } = props;
+    const { handleFormOnSubmit, handleFormOnInput } = props;
 
     return (
         <div className="appeal">
@@ -33,8 +36,8 @@ const AppealPage: React.FC<PropsType> = props => {
             </div>
             {SelectedAppeal !== null ? (
                 <>
-                    <AppealPageForm {...{ SelectedAppeal }} {...{ handleFormOnSubmit }} />
-                    <div style={{ marginTop: 20, padding: 60 }}>где-то тут будут текст и кнопочки</div>
+                    <AppealPageForm {...{ SelectedAppeal }} {...{ handleFormOnSubmit, handleFormOnInput }} />
+                    <AppealPageTemplate {...{ SelectedAppeal, FormData }} />
                 </>
             ) : null}
         </div>
