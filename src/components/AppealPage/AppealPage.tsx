@@ -15,12 +15,14 @@ type PropsType = {
     FormData: { [id: string]: string | boolean };
     handleFormOnSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
     handleFormOnInput: (event: React.FormEvent<HTMLFormElement>) => void;
+    handePrint: () => void;
 };
 
 const AppealPage: React.FC<PropsType> = props => {
     const { org } = props;
     const { AppealsSource, SelectedAppeal, FormData } = props;
     const { handleFormOnSubmit, handleFormOnInput } = props;
+    const { handePrint } = props;
 
     return (
         <div className="appeal">
@@ -37,7 +39,7 @@ const AppealPage: React.FC<PropsType> = props => {
             {SelectedAppeal !== null ? (
                 <>
                     <AppealPageForm {...{ SelectedAppeal }} {...{ handleFormOnSubmit, handleFormOnInput }} />
-                    <AppealPageTemplate {...{ SelectedAppeal, FormData }} />
+                    <AppealPageTemplate {...{ SelectedAppeal, FormData }} {...{ handePrint }} />
                 </>
             ) : null}
         </div>

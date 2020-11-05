@@ -30,5 +30,34 @@
                 }
             }
         }
+
+        &__actions {
+            margin-top: 30px;
+
+            &__print {
+                background-color: #2580ff;
+                padding: 10px 20px;
+
+                border: 0;
+                border-radius: 99px;
+
+                font-size: 1.2em;
+                color: #fff;
+
+                transition: all 0.2s ease-in-out;
+
+                cursor: pointer;
+
+                outline: 0;
+
+                &:focus {
+                    box-shadow: 0px 5px 20px rgba(37, 128, 255, 0.5);
+                }
+
+                &:hover {
+                    box-shadow: 0px 5px 40px rgba(37, 128, 255, 0.5);
+                }
+            }
+        }
     }
 }

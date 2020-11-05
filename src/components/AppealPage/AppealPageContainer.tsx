@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { renderToStaticMarkup } from 'react-dom/server';
 
 import { EduApeals } from '../../data';
 
@@ -71,7 +71,56 @@ const EduPageContainer: React.FC<PropsType> = ({ org, appealID = '' }) => {
         getDataFromForm(event.currentTarget);
     };
 
-    return <AppealPage {...{ org }} {...{ AppealsSource, SelectedAppeal, FormData }} {...{ handleFormOnSubmit, handleFormOnInput }} />;
+    const handePrint = () => {
+        const PrintWindow = window.open('', ':)', 'location=1,status=1,scrollbars=1,resizable=1,height=1123,width=794');
+        const Content = document.querySelector('.appeal__template__text');
+
+        if (!SelectedAppeal || !PrintWindow || !Content) return false;
+
+        const Template = SelectedAppeal.template;
+
+        const Styles = [
+            'body { font-family: "Times New Roman", Times, serif; line-height: 1.5; text-align: justify; }',
+            '.text--right { text-align: right }',
+            '.text--center { text-align: center }',
+            '.text--mt { margin-top:1em }',
+        ];
+
+        PrintWindow.document.write('<!DOCTYPE html><html lang="ru"><head></head><body></body></html>');
+
+        const PrintWindowHead = PrintWindow.document.querySelector('head') ?? document.createElement('head');
+
+        PrintWindowHead.innerHTML = renderToStaticMarkup(
+            <>
+                <title>{SelectedAppeal.title}</title>
+                <style>{Styles.join('\n')}</style>
+            </>
+        );
+
+        const PrintWindowBody = PrintWindow.document.querySelector('body') ?? document.createElement('body');
+
+        PrintWindowBody.innerHTML = renderToStaticMarkup(<Template {...FormData} />);
+
+        PrintWindow.document.close();
+
+        window.setTimeout(() => {
+            setTimeout(() => {
+                PrintWindow.focus();
+            }, 100);
+            PrintWindow.print();
+        }, 500);
+
+        return true;
+    };
+
+    return (
+        <AppealPage
+            {...{ org }}
+            {...{ AppealsSource, SelectedAppeal, FormData }}
+            {...{ handleFormOnSubmit, handleFormOnInput }}
+            {...{ handePrint }}
+        />
+    );
 };
 
 export default EduPageContainer;
