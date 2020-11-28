@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { AppealType } from '../../../data/types';
 
 import './AppealPageTemplate.scss';

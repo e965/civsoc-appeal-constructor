@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 
 import { EduApeals, PoliceApeals } from '../../data';

@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Container } from '../common';
 
 import MasterHeader from './MasterHeader/MasterHeaderContainer';

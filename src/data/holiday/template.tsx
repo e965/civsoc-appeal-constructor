@@ -1,6 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
-
-import React from 'react';
 
 const Template: React.FC<any> = props => {
     return (
