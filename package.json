@@ -12,7 +12,9 @@
         "eject": "react-scripts eject",
         "eslint": "eslint .",
         "prettier": "prettier --write **/*.{html,json,yaml,ts,tsx,css,scss}",
-        "lint-staged": "lint-staged"
+        "lint-staged": "lint-staged",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "lint-staged": {
         "*.{html,json,yaml,ts,tsx,css,scss}": [
@@ -51,6 +53,7 @@
         "@typescript-eslint/parser": "4.8.2",
         "eslint-config-prettier": "6.15.0",
         "eslint-plugin-prettier": "3.1.4",
+        "gh-pages": "3.1.0",
         "husky": "4.3.0",
         "lint-staged": "10.5.2",
         "prettier": "2.2.1",
