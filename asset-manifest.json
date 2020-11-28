@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "./static/css/main.3ea8b2e3.chunk.css",
+    "main.js": "./static/js/main.9092af2f.chunk.js",
+    "runtime-main.js": "./static/js/runtime-main.8de6e87f.js",
+    "static/js/2.e9ec685b.chunk.js": "./static/js/2.e9ec685b.chunk.js",
+    "index.html": "./index.html",
+    "static/js/2.e9ec685b.chunk.js.LICENSE.txt": "./static/js/2.e9ec685b.chunk.js.LICENSE.txt",
+    "static/media/civsoc-logo-footer.5df76fa5.svg": "./static/media/civsoc-logo-footer.5df76fa5.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8de6e87f.js",
+    "static/js/2.e9ec685b.chunk.js",
+    "static/css/main.3ea8b2e3.chunk.css",
+    "static/js/main.9092af2f.chunk.js"
+  ]
+}
