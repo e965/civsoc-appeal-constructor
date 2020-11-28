@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 
-import { EduApeals } from '../../data';
+import { EduApeals, PoliceApeals } from '../../data';
 
 import { AppealType } from '../../data/types';
 
@@ -19,8 +19,7 @@ const EduPageContainer: React.FC<PropsType> = ({ org, appealID = '' }) => {
     const [FormData, setFormData] = useState<{ [id: string]: string | boolean }>({});
 
     useEffect(() => {
-        const tmpPoliceAppeals: AppealType[] = [];
-        setAppealsSource(org === 'edu' ? EduApeals : tmpPoliceAppeals);
+        setAppealsSource(org === 'edu' ? EduApeals : PoliceApeals);
     }, [org]);
 
     useEffect(() => {
